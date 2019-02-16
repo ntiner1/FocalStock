@@ -1,4 +1,4 @@
-package com.focalstock.hello;
+package com.focalstock.web.greeting;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
