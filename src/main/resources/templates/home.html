@@ -9,12 +9,13 @@
   <div class="search">
     <h1><span>Focal Stock</span></h1>
 
-    <form>
-      <label>Ticker</label>
-      <!--
-      <input type="text" th:field="*{ticker}" placeholder="AMZN">
-      -->
+    <form action="#" th:action="@{/}" th:object="${ticker}" method="POST">
+      <p>Ticker:
+        <input type="text" th:field="*{ticker}" placeholder="AMZN"/>
+      </p>
+      <p><input type="submit" value="Submit" /></p>
     </form>
+
   </div>
 </body>
 </html>
