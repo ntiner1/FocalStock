@@ -19,6 +19,7 @@ public class HomeController {
 
   @PostMapping("/")
   public String tickerSubmit(@ModelAttribute Ticker ticker) {
+    // Call ticker api
     return "info";
   }
 
