@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <div th:replace="~{fragments/base :: header}"></div>
   <link rel="stylesheet" type="text/css" media="all" href="../../css/home.css" th:href="@{/css/home.css}" />
@@ -9,16 +9,20 @@
 <body>
   <div th:replace="~{fragments/base :: nav}"></div>
 
-
-  <div class="container d-flex justify-content-center">
-    <form action="#" th:action="@{/}" th:object="${ticker}" method="POST" id="ticker" >
-      <div class="form-group text-center">
-        <label for="ticker"><h1>Focal Stock</h1></label>
-        <input type="text" th:field="*{ticker}" class="form-control" id="ticker" placeholder="Ticker"/>
+  <div class="container-fluid mt-5" id="search">
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <form action="#" th:action="@{/}" th:object="${ticker}" method="POST">
+          <div class="form-group text-center">
+            <label for="ticker"><h1>Focal Stock</h1></label>
+            <input type="text" th:field="*{ticker}" class="form-control" placeholder="Ticker"/>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
 
-  <div th:replace="~{fragments/base :: footer}"></div>
+  <div th:insert="~{fragments/base :: footer}"></div>
+  <div th:replace="~{fragments/base :: js}"></div>
 </body>
 </html>
