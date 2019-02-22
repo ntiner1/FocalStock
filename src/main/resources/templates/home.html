@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Focal Stock</title>
+  <div th:replace="~{fragments/base :: header}"></div>
   <link rel="stylesheet" type="text/css" media="all" href="../../css/home.css" th:href="@{/css/home.css}" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script th:src=@{js/home.js}></script>
 </head>
 
 <body>
-  <div class="search">
-    <h1><span>Focal Stock</span></h1>
+  <div th:replace="~{fragments/base :: nav}"></div>
 
-    <form id="ticker" action="#" th:action="@{/}" th:object="${ticker}" method="POST">
-      <p>
-        <input type="text" th:field="*{ticker}" placeholder="Ticker"/>
-      </p>
+
+  <div class="container d-flex justify-content-center">
+    <form action="#" th:action="@{/}" th:object="${ticker}" method="POST" id="ticker" >
+      <div class="form-group text-center">
+        <label for="ticker"><h1>Focal Stock</h1></label>
+        <input type="text" th:field="*{ticker}" class="form-control" id="ticker" placeholder="Ticker"/>
+      </div>
     </form>
-
   </div>
+
+  <div th:replace="~{fragments/base :: footer}"></div>
 </body>
 </html>

@@ -11,7 +11,7 @@ public class CustomErrorController implements ErrorController {
 
   @RequestMapping(value = PATH)
   public String error() {
-    return "error";
+    return "pages/error";
   }
 
   @Override
