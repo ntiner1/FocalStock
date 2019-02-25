@@ -9,7 +9,7 @@
 <body>
   <div th:replace="~{fragments/base :: nav}"></div>
 
-  <div class="container-fluid mt-5" id="search">
+  <div class="container-fluid" id="search">
     <div class="row justify-content-md-center">
       <div class="col-md-auto">
         <form action="#" th:action="@{/}" th:object="${ticker}" method="POST">
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div th:insert="~{fragments/base :: footer}"></div>
+  <div th:replace="~{fragments/base :: footer}"></div>
   <div th:replace="~{fragments/base :: js}"></div>
 </body>
 </html>
