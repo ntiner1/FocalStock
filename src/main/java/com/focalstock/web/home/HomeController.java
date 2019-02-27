@@ -49,8 +49,8 @@ public class HomeController {
       model.addAttribute("company", tickerInfo.get("companyName").toString());
       model.addAttribute("website", tickerInfo.get("website").toString());
       model.addAttribute("latestPrice", getLatestStockPrice(ticker.getTicker()));
-      List<String> historicalPrices = getHistoricalPrices(ticker.getTicker(), historicalLength);
-      System.out.println(historicalPrices);
+      //List<String> historicalPrices = getHistoricalPrices(ticker.getTicker(), historicalLength);
+      //System.out.println(historicalPrices);
     } catch (HttpClientErrorException e) {
       System.out.println("[ERROR] Company info: " + e.getMessage());
     }
